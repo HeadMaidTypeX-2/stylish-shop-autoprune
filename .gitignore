@@ -1,0 +1,6 @@
+module.zip
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

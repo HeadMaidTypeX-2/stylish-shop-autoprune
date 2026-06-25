@@ -1,0 +1,21 @@
+{
+  "id": "stylish-shop-autoprune",
+  "title": "Stylish Shop Auto-Prune",
+  "description": "Adds a per-category 'Remove items at 0 stock' toggle to the Stylish Shop config UI. When a flagged category has an item whose stock reaches a finite 0 (e.g. a sold-back item that fully sells through), that entry is removed instead of lingering as an out-of-stock listing. System-agnostic; requires the Stylish Shop module.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "14"
+  },
+  "authors": [
+    { "name": "Dettie (for HeadMaidTypeX-2)" }
+  ],
+  "esmodules": [
+    "scripts/shop-autoprune.js"
+  ],
+  "url": "https://github.com/<YOUR-GITHUB-USERNAME>/stylish-shop-autoprune",
+  "manifest": "https://github.com/<YOUR-GITHUB-USERNAME>/stylish-shop-autoprune/releases/latest/download/module.json",
+  "download": "https://github.com/<YOUR-GITHUB-USERNAME>/stylish-shop-autoprune/releases/latest/download/module.zip",
+  "readme": "https://github.com/<YOUR-GITHUB-USERNAME>/stylish-shop-autoprune/blob/main/README.md",
+  "bugs": "https://github.com/<YOUR-GITHUB-USERNAME>/stylish-shop-autoprune/issues"
+}

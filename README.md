@@ -33,16 +33,5 @@ System-agnostic. Does nothing unless the **Stylish Shop** module is active.
 Manifest URL:
 
 ```
-https://github.com/<YOUR-GITHUB-USERNAME>/stylish-shop-autoprune/releases/latest/download/module.json
+https://github.com/HeadMaidTypeX-2/stylish-shop-autoprune/releases/latest/download/module.json
 ```
-
-## Update workflow
-
-```bash
-git add -A && git commit -m "..."
-git tag v1.0.1
-git push origin main --tags
-```
-
-The included GitHub Action stamps the version/URLs, zips the module, and
-publishes a release that Foundry's "Check for Updates" can see.

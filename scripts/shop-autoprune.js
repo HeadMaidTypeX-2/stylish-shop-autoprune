@@ -88,10 +88,14 @@ Hooks.on("renderShopConfigApp", (app, element, context) => {
     cb.addEventListener("change", async () => {
       const a = game.actors.get(actorId);
       if (!a) return;
-      const cur = foundry.utils.deepClone(a.getFlag(MODULE_ID, AUTOPRUNE_FLAG) ?? {});
-      if (cb.checked) cur[catId] = true; else delete cur[catId];
-      await a.setFlag(MODULE_ID, AUTOPRUNE_FLAG, cur);
-      if (cb.checked) await pruneShop(a); // clear any already-empty entries immediately
+      if (cb.checked) {
+        // setFlag merges, so adding a key works fine.
+        await a.setFlag(MODULE_ID, `${AUTOPRUNE_FLAG}.${catId}`, true);
+        await pruneShop(a); // clear any already-empty entries immediately
+      } else {
+        // setFlag MERGES, so it can't remove a key — use the "-=" deletion syntax.
+        await a.update({ [`flags.${MODULE_ID}.${AUTOPRUNE_FLAG}.-=${catId}`]: null });
+      }
     });
 
     label.append(cb, document.createTextNode("Remove items at 0 stock"));

@@ -1,3 +1,11 @@
+#OUTDATED
+
+Function was recently added natively to Stylish Shops, there for this module is no longer necessary. 
+Still functions as written, so perhaps has some use if you'd like more control over categories that
+auto-prune.
+
+No further updates or compatibility checks will be made.
+
 # Stylish Shop Auto-Prune
 
 Adds a per-category **"Remove items at 0 stock"** toggle to the
